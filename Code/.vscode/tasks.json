@@ -1,0 +1,52 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "compile",
+            "type": "shell",
+            "command": "g++ -g -std=c++14 -Wall -Wextra main.cpp -o main.exe",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "run",
+            "type": "shell",
+            "command": "main.exe < data.in > data.out",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "ComRun",
+            "type": "shell",
+            "command": "g++ -g -std=c++14 -Wall -Wextra main.cpp -o main.exe & main.exe < data.in > data.out",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "CompileHash",
+            "type": "shell",
+            "command": "g++ -g -std=c++14 -Wall -Wextra unordered_map.h -o unordered_map.o",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "CompileBiblio",
+            "type": "shell",
+            "command": "g++ -g -std=c++14 -Wall -Wextra biblioteca.h -o biblioteca.o",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}

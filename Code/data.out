@@ -1,0 +1,10 @@
+i = 1; mp.find(i) = 1; 
+i = 2; mp.find(i) = 1; 
+i = 3; mp.find(i) = 0; 
+i = 4; mp.find(i) = 0; 
+
+i = 1; mp[i] = 1; 
+i = 2; mp[i] = 0; 
+i = 3; mp[i] = 0; 
+i = 4; mp[i] = 0; 
+
